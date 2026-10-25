@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dhananjay Tiwari</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:#3d4144}
+a{color:#1f6f8b;text-decoration:none}a:hover{color:#134a5e;text-decoration:underline}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #ffffff; display: flex; flex-direction: column">
+
+  <header style="border-bottom: 1px solid #e6e8ea; background: #ffffff">
+    <nav aria-label="Main" style="max-width: 1180px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px">
+      <button type="button" onClick="{{goHome}}" style="appearance: none; background: none; border: 0; padding: 10px 0; margin-right: auto; font: inherit; font-size: 1.15rem; font-weight: 700; color: #22272b; cursor: pointer">Dhananjay Tiwari</button>
+      <div style="display: flex; flex-wrap: wrap; gap: 2px 4px">
+        <sc-for list="{{nav}}" as="item" hint-placeholder-count="6">
+          <button type="button" onClick="{{item.pick}}" aria-current="{{item.current}}" style="{{item.style}}">{{item.label}}</button>
+        </sc-for>
+      </div>
+    </nav>
+  </header>
+
+  <div style="flex: 1 0 auto; width: 100%; max-width: 1180px; margin: 0 auto; box-sizing: border-box; padding: 40px 24px 64px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: flex-start">
+
+    <aside style="flex: 1 1 220px; max-width: 260px; display: flex; flex-direction: column; gap: 14px">
+      <div role="img" aria-label="Profile photo placeholder" style="width: 168px; height: 168px; border-radius: 50%; background: #e9eef1; border: 1px solid #d5dde2; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; font-weight: 600; color: #4f6470; letter-spacing: 0.02em">DT</div>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <h2 style="margin: 0; font-size: 1.3rem; color: #22272b">Dhananjay Tiwari</h2>
+        <p style="margin: 0; font-size: 0.95rem; line-height: 1.45; color: #5a6066">PhD Candidate, Mechanical Engineering · University of Illinois Urbana-Champaign</p>
+      </div>
+      <ul style="list-style: none; margin: 4px 0 0; padding: 14px 0 0; border-top: 1px solid #e6e8ea; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: #4a5056">
+        <li style="display: flex; align-items: center; gap: 10px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+          <span>Urbana-Champaign, IL</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-5 9 5-9 5-9-5z"></path><path d="M7 12.5V17c3 2 7 2 10 0v-4.5"></path></svg>
+          <span>University of Illinois</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+          <a href="mailto:dtiwari2@illinois.edu">dtiwari2@illinois.edu</a>
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 9l10 6 10-6-10-6z"></path><path d="M6 11.5V16a6 6 0 0 0 12 0v-4.5"></path></svg>
+          <a href="https://scholar.google.com/">Google Scholar</a>
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5a3 3 0 0 0-.9-2.4c3-.3 6.1-1.5 6.1-6.6a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.6 12.6 0 0 0-6.6 0C5.8 1.1 4.7 1.4 4.7 1.4a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 3.2 8.6c0 5 3.1 6.3 6.1 6.6a3 3 0 0 0-.9 2.4V21"></path></svg>
+          <a href="https://github.com/dt-1729">dt-1729</a>
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h6"></path></svg>
+          <a href="./assets/7e71b7ad4c0bdcace23e0f7a110e0162.pdf" download="Dhananjay_Tiwari_CV.pdf">CV (PDF)</a>
+        </li>
+      </ul>
+    </aside>
+
+    <main style="flex: 999 1 560px; min-width: 0; line-height: 1.65; font-size: 1rem">
+
+      <sc-if value="{{isAbout}}" hint-placeholder-val="{{ true }}">
+        <section style="display: flex; flex-direction: column; gap: 18px">
+          <h1 style="margin: 0 0 4px; font-size: 2rem; color: #22272b">About</h1>
+          <p style="margin: 0">I'm a PhD candidate in Mechanical Engineering at the University of Illinois Urbana-Champaign, where I'm also completing an MS in Mathematics. I'm advised by <a href="https://salapaka.web.engr.illinois.edu/">Prof. Srinivasa M. Salapaka</a>, and my research is on optimization, planning and scheduling over large-scale networks: multi-agent routing, facility location and constrained resource allocation. My tools come from the Maximum Entropy Principle, control barrier functions, reinforcement learning and online learning, and I build scalable computational frameworks for them in Python and PyTorch. I also work with Prof. Ankur Mani on distributed online stochastic optimization with bandit feedback.</p>
+          <p style="margin: 0">Before Illinois, I completed a dual B.Tech + M.Tech in Mechanical Engineering at IIT Bombay with a minor in Systems and Control Engineering, advised by Prof. Ravi N. Banavar. There I worked on geometric mechanics and discrete geometric control of flexible-link and multi-DOF robot manipulators, and on energy optimisation in wave energy converters, including a collaboration with Dr. Paul Kotyczka at TU Munich.</p>
+
+          <h2 style="margin: 18px 0 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Research interests</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <span style="padding: 4px 12px; border-radius: 999px; background: #eef4f7; color: #2c4f5e; font-size: 0.88rem">Optimization</span>
+            <span style="padding: 4px 12px; border-radius: 999px; background: #eef4f7; color: #2c4f5e; font-size: 0.88rem">Multi-agent planning &amp; scheduling</span>
+            <span style="padding: 4px 12px; border-radius: 999px; background: #eef4f7; color: #2c4f5e; font-size: 0.88rem">Reinforcement learning</span>
+            <span style="padding: 4px 12px; border-radius: 999px; background: #eef4f7; color: #2c4f5e; font-size: 0.88rem">Online learning &amp; bandits</span>
+            <span style="padding: 4px 12px; border-radius: 999px; background: #eef4f7; color: #2c4f5e; font-size: 0.88rem">Maximum Entropy methods</span>
+            <span style="padding: 4px 12px; border-radius: 999px; background: #eef4f7; color: #2c4f5e; font-size: 0.88rem">Geometric control</span>
+          </div>
+
+          <h2 style="margin: 18px 0 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Highlights</h2>
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+            <li><strong>2026</strong> · Distributed online stochastic linear optimization paper under review at ACM EC 2026.</li>
+            <li><strong>2025</strong> · Best Presenter Award, CSL Student Conference (MDPs, RL and Optimization session).</li>
+            <li><strong>2025</strong> · Paper reviewer for AAAI 2026 and IEEE L-CSS.</li>
+            <li><strong>2025</strong> · Invited talk on routing and scheduling at Tata Consultancy Services Research, Mumbai.</li>
+          </ul>
+
+          <h2 style="margin: 18px 0 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Beyond research</h2>
+          <p style="margin: 0">I've spent over ten years teaching myself realistic portrait and architectural drawing in graphite, ink and charcoal. My work won Kalamanch (Fine Arts, Abhyuday, IIT Bombay) and was featured for three years in Kaladarshan, the Fine Arts Club's flagship exhibition at IIT Bombay.</p>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{isResearch}}" hint-placeholder-val="{{ false }}">
+        <section style="display: flex; flex-direction: column; gap: 22px">
+          <h1 style="margin: 0; font-size: 2rem; color: #22272b">Research</h1>
+
+          <h2 style="margin: 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Optimization and Planning <span style="font-weight: 400; font-size: 0.95rem; color: #5a6066">· UIUC, with Prof. Srinivasa M. Salapaka and Prof. Ankur Mani</span></h2>
+
+          <article style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Distributed Online Stochastic Linear Optimization</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Oct 2025 – Feb 2026 · Under review, ACM EC 2026</span>
+            </div>
+            <ul style="margin: 0; padding-left: 20px">
+              <li>Formulated an online stochastic linear optimization framework with bandit feedback, in which myopic agents are guided by a central planner.</li>
+              <li>Designed a subspace contraction policy that lets the planner steer agents toward the optimal decision.</li>
+              <li>Proved problem-independent regret bounds of O(d<sup>3.5</sup> log T) for a general polytope decision space.</li>
+            </ul>
+          </article>
+
+          <article style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Simultaneous Multi-Agent Routing and Scheduling</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Jan 2024 – present · AIAA SciTech 2025</span>
+            </div>
+            <ul style="margin: 0; padding-left: 20px">
+              <li>Built a modular Python framework for conflict-free multi-agent routing and scheduling on graph networks, optimizing makespan and total travel cost across large networks.</li>
+              <li>Achieved 10× faster runtime than a penalty-based baseline with an annealing-inspired optimization algorithm integrated with control barrier functions.</li>
+            </ul>
+          </article>
+
+          <article style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Parametrized Multi-Agent Routing via Deep Attention Models</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Mar 2025 – Aug 2025 · arXiv</span>
+            </div>
+            <ul style="margin: 0; padding-left: 20px">
+              <li>Designed a hybrid shortest-path and uniform-path sampling scheme for multi-agent routing and facility location, scaling up to 10× beyond baselines at comparable cost and faster runtimes.</li>
+              <li>Accelerated gradient-based optimization by O(M<sup>2</sup>), with 10× lower costs than existing metaheuristics and a 1500× speedup over Gurobi's exact mixed-integer programming solver.</li>
+            </ul>
+          </article>
+
+          <article style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Capacitated Resource Allocation</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Nov 2024 – Mar 2025 · CDC 2025</span>
+            </div>
+            <ul style="margin: 0; padding-left: 20px">
+              <li>Designed a nonlinear optimization framework via the Maximum Entropy Principle and control barrier functions, guaranteeing KKT conditions while searching a large combinatorial space efficiently.</li>
+              <li>Achieved 71× and 4× speedups over SciPy's SLSQP and Safe Gradient Flow, with efficient constraint handling.</li>
+            </ul>
+          </article>
+
+          <h2 style="margin: 10px 0 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Dynamics and Controls <span style="font-weight: 400; font-size: 0.95rem; color: #5a6066">· IIT Bombay &amp; TU Munich, with Prof. Ravi N. Banavar and Dr. Paul Kotyczka</span></h2>
+
+          <article style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Geometric Modelling &amp; Control of Flexible Link Manipulators</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Jul 2021 – Jul 2022 · IFAC World Congress</span>
+            </div>
+            <ul style="margin: 0; padding-left: 20px">
+              <li>Designed a control law for point-to-point manoeuvres of a flexible manipulator with suppressed flexural deflections.</li>
+              <li>Developed a Lie group variational integrator (LGVI) model of the manipulator and a preliminary convergence analysis for the evolution of beam cross-section rotations.</li>
+            </ul>
+          </article>
+
+          <article style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Coordinate-Invariant Modelling &amp; Control of a 3-DOF Manipulator</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Jul 2020 – Jun 2021 · LHMNC 2021</span>
+            </div>
+            <ul style="margin: 0; padding-left: 20px">
+              <li>Developed a discrete-time, coordinate-free modelling and control algorithm for a 3-DOF revolute-joint manipulator, using geometric potential shaping for joint-angle control.</li>
+              <li>Validated the integrator's structure-preserving property in simulation, with average deviation on the order of 10<sup>−14</sup> in all configuration variables.</li>
+            </ul>
+          </article>
+
+          <article style="display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Energy Optimisation in Wave Energy Converters</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">May 2019 – Mar 2020 · MED 2021</span>
+            </div>
+            <ul style="margin: 0; padding-left: 20px">
+              <li>Conceptualized a WEC as a floating sphere with an internal 3D pendulum and derived and validated a dynamic model for 3D double-pendulum motion.</li>
+              <li>Formulated and solved an optimal control problem in CasADi–MATLAB to maximize energy conversion under limited actuation.</li>
+            </ul>
+          </article>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{isPublications}}" hint-placeholder-val="{{ false }}">
+        <section style="display: flex; flex-direction: column; gap: 18px">
+          <h1 style="margin: 0; font-size: 2rem; color: #22272b">Publications</h1>
+          <p style="margin: 0; color: #5a6066; font-size: 0.95rem">For the full list, see <a href="https://scholar.google.com/">Google Scholar</a>.</p>
+          <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0">
+            <sc-for list="{{pubs}}" as="p" hint-placeholder-count="8">
+              <li style="padding: 16px 0; border-bottom: 1px solid #eef0f2; display: flex; flex-direction: column; gap: 4px">
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+                  <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #2c4f5e; background: #eef4f7; padding: 2px 8px; border-radius: 4px">{{p.kind}}</span>
+                  <span style="font-size: 0.85rem; color: #5a6066">{{p.year}}</span>
+                </div>
+                <h3 style="margin: 0; font-size: 1.05rem; line-height: 1.4; color: #22272b">{{p.title}}</h3>
+                <p style="margin: 0; font-size: 0.93rem; color: #4a5056">{{p.pre}}<strong style="color: #22272b">Tiwari D</strong>{{p.post}}</p>
+                <p style="margin: 0; font-size: 0.93rem; color: #5a6066; font-style: italic">{{p.venue}}</p>
+                <sc-if value="{{p.hasLink}}" hint-placeholder-val="{{ true }}">
+                  <a href="{{p.link}}" style="font-size: 0.9rem; align-self: flex-start">{{p.linkLabel}}</a>
+                </sc-if>
+              </li>
+            </sc-for>
+          </ol>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{isTeaching}}" hint-placeholder-val="{{ false }}">
+        <section style="display: flex; flex-direction: column; gap: 22px">
+          <h1 style="margin: 0; font-size: 2rem; color: #22272b">Teaching &amp; Mentorship</h1>
+
+          <h2 style="margin: 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Teaching assistant</h2>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Instrumentation and Signal Processing</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">UIUC · Jan 2023 – present</span>
+            </div>
+            <p style="margin: 0">Led 100+ students through 130+ hours of lab experiments on signal processing and real-time control; designed homework, held office hours and taught theory classes.</p>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Microprocessors and Automatic Control</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">IIT Bombay · Aug – Nov 2021</span>
+            </div>
+            <p style="margin: 0">Helped 15+ students operate lab microcontrollers and peripherals through a virtual environment, linking theory to practical implementation.</p>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Engineering Mechanics</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">IIT Bombay · Jan – Mar 2020</span>
+            </div>
+            <p style="margin: 0">Mentored 70+ students through tutorials on concepts and problem solving.</p>
+          </article>
+
+          <h2 style="margin: 10px 0 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Mentorship &amp; leadership</h2>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Voluntary High-School Research Mentor</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">UIUC · Jun – Sep 2025</span>
+            </div>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Controls Subsystem Lead, Student Satellite Program</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">IIT Bombay · May 2019 – May 2021</span>
+            </div>
+            <p style="margin: 0">Led a team of 8 building a simulation framework for autonomous rendezvous and docking of two spacecraft; recruited members through technical assessments and interviews and ran a two-week project-based onboarding. Created a Python simulation platform for testing attitude determination and control algorithms.</p>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Student Mentor, Institute Student Mentorship Program</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">IIT Bombay · Oct 2020 – Jul 2021</span>
+            </div>
+            <p style="margin: 0">Mentored 14 first-year undergraduates; received the ISMP Special Recognition award, the program's highest internal honour.</p>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Manager, Controls &amp; Dynamical Systems Reading Group</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">IIT Bombay · Apr 2020 – Apr 2021</span>
+            </div>
+            <p style="margin: 0">Organised a lecture series introducing newcomers to control engineering, and ran Summer Learning Projects 2020 for 20+ students across control theory topics.</p>
+          </article>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{isTalks}}" hint-placeholder-val="{{ false }}">
+        <section style="display: flex; flex-direction: column; gap: 18px">
+          <h1 style="margin: 0; font-size: 2rem; color: #22272b">Talks &amp; Service</h1>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+            <sc-for list="{{talks}}" as="t" hint-placeholder-count="8">
+              <li style="padding: 14px 0; border-bottom: 1px solid #eef0f2; display: flex; flex-wrap: wrap; gap: 4px 20px; align-items: baseline">
+                <span style="flex: 0 0 110px; font-size: 0.88rem; color: #5a6066">{{t.when}}</span>
+                <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column">
+                  <strong style="color: #22272b; font-weight: 600">{{t.title}}</strong>
+                  <span style="font-size: 0.93rem; color: #4a5056">{{t.where}}</span>
+                </div>
+              </li>
+            </sc-for>
+          </ul>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{isCv}}" hint-placeholder-val="{{ false }}">
+        <section style="display: flex; flex-direction: column; gap: 22px">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between">
+            <h1 style="margin: 0; font-size: 2rem; color: #22272b">CV</h1>
+            <a href="./assets/7e71b7ad4c0bdcace23e0f7a110e0162.pdf" download="Dhananjay_Tiwari_CV.pdf" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; background: #1f6f8b; color: #ffffff; font-weight: 600; font-size: 0.95rem; text-decoration: none">Download PDF</a>
+          </div>
+
+          <h2 style="margin: 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Education</h2>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">University of Illinois Urbana-Champaign</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Aug 2022 – May 2027 (expected)</span>
+            </div>
+            <p style="margin: 0">PhD, Mechanical Engineering · MS, Mathematics (ongoing) · GPA 3.9/4.0</p>
+            <p style="margin: 0; color: #5a6066; font-size: 0.95rem">Advisor: Prof. Srinivasa M. Salapaka</p>
+          </article>
+          <article style="display: flex; flex-direction: column; gap: 4px">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+              <h3 style="margin: 0; font-size: 1.05rem; color: #22272b">Indian Institute of Technology Bombay</h3>
+              <span style="font-size: 0.88rem; color: #5a6066">Jul 2017 – Jun 2022</span>
+            </div>
+            <p style="margin: 0">B.Tech &amp; M.Tech (Dual Degree), Mechanical Engineering · Minor in Systems and Control Engineering · GPA 9.13/10</p>
+            <p style="margin: 0; color: #5a6066; font-size: 0.95rem">Advisor: Prof. Ravi N. Banavar</p>
+          </article>
+
+          <h2 style="margin: 10px 0 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Honours</h2>
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+            <li>Best Presenter Award, CSL Student Conference 2025 (MDPs, RL and Optimization)</li>
+            <li>ISMP Special Recognition award, IIT Bombay</li>
+            <li>Institute Academic Prize (2018–19), best performance in a batch of 40, IIT Bombay</li>
+            <li>Bronze Medal, Inter-IIT Tech Meet 2018</li>
+          </ul>
+
+          <h2 style="margin: 10px 0 0; font-size: 1.25rem; color: #22272b; padding-bottom: 6px; border-bottom: 1px solid #e6e8ea">Skills</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px">
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <h3 style="margin: 0; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5a6066">Programming</h3>
+              <p style="margin: 0">Python, PyTorch, NumPy, CVXPY, Embedded C/C++, MATLAB/Simulink, Git, CAD</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <h3 style="margin: 0; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5a6066">Analytical</h3>
+              <p style="margin: 0">Model predictive control, adaptive control, convex optimization, dynamic programming, reinforcement learning, kinematic modelling &amp; simulation</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <h3 style="margin: 0; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5a6066">Electronics</h3>
+              <p style="margin: 0">TI microcontrollers, NI USB-7855R, optical encoders, MPUs, LabVIEW FPGA</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <h3 style="margin: 0; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5a6066">Hardware</h3>
+              <p style="margin: 0">Atomic force microscopy, self-balancing Segway bot, automated strawberry-picker bot</p>
+            </div>
+          </div>
+        </section>
+      </sc-if>
+
+    </main>
+  </div>
+
+  <footer style="border-top: 1px solid #e6e8ea; background: #f7f8f9">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: 0.85rem; color: #5a6066">
+      <span>© 2026 Dhananjay Tiwari</span>
+      <span>Site last updated October 2026</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'about' };
+  }
+  go(id) {
+    this.setState({ tab: id });
+    try { window.scrollTo(0, 0); } catch (e) {}
+  }
+  renderVals() {
+    const tab = this.state.tab || 'about';
+    const tabs = [
+      ['about', 'About'],
+      ['research', 'Research'],
+      ['publications', 'Publications'],
+      ['teaching', 'Teaching'],
+      ['talks', 'Talks & Service'],
+      ['cv', 'CV']
+    ];
+    const base = 'appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; font: inherit; font-size: 0.98rem; padding: 10px 10px 8px; min-height: 44px; cursor: pointer; ';
+    const nav = tabs.map(([id, label]) => ({
+      label,
+      current: id === tab ? 'page' : 'false',
+      style: base + (id === tab ? 'color: #1f6f8b; font-weight: 600; border-bottom-color: #1f6f8b;' : 'color: #4a5056; font-weight: 400;'),
+      pick: () => this.go(id)
+    }));
+    const pubs = [
+      { kind: 'Journal', year: '2025', title: 'A Maximum Entropy Approach to Joint Obstacle-Aware Routing and Facility Location in UAV Networks Under Energy Constraints', pre: 'Basiri S, ', post: ', Hassani G, Papachristos C, Salapaka S.', venue: 'IEEE Access, vol. 13, pp. 216694–216704', link: '' },
+      { kind: 'Conference', year: '2025', title: 'Multi-Agent Integrated Path Planning and Scheduling in Advanced Air Mobility', pre: '', post: ', Basiri S, Salapaka S.', venue: 'AIAA SciTech 2025 Forum, p. 1352', link: 'https://doi.org/10.2514/6.2025-1352' },
+      { kind: 'Preprint', year: '2025', title: 'A Control Barrier Function Approach to Constrained Resource Allocation Problems in a Maximum Entropy Principle Framework', pre: 'Bayati A, ', post: ', Salapaka S.', venue: 'arXiv:2504.01378', link: 'https://doi.org/10.48550/arXiv.2504.01378' },
+      { kind: 'Preprint', year: '2025', title: 'Towards Enabling Learning for Time-Varying Finite Horizon Sequential Decision-Making Problems', pre: '', post: ', Basiri S, Salapaka S.', venue: 'arXiv:2504.02129', link: 'https://arxiv.org/abs/2504.02129' },
+      { kind: 'Conference', year: '2024', title: 'Optimizing UAV Network Efficiency: Integrative Strategies for Simultaneous Energy Management & Obstacle-Aware Routing', pre: 'Basiri S, ', post: ', Papachristos C, Salapaka S.', venue: 'AIAA SciTech 2024 Forum, p. 1166', link: 'https://doi.org/10.2514/6.2024-1166' },
+      { kind: 'Journal', year: '2023', title: 'Discrete Geometric Control of Planar Flexible Link Manipulators', pre: '', post: ', Banavar RN.', venue: 'IFAC-PapersOnLine 56(2):2865–2870', link: 'https://doi.org/10.1016/j.ifacol.2023.10.1402' },
+      { kind: 'Journal', year: '2021', title: 'Coordinate-Invariant Modeling and Control of a Three-DOF Robot Manipulator', pre: 'Herrmann M, ', post: ', Kotyczka P, Banavar R.', venue: 'IFAC-PapersOnLine 54(19):230–236', link: 'https://doi.org/10.1016/j.ifacol.2021.11.083' },
+      { kind: 'Conference', year: '2021', title: 'Geometric Modelling and Energy Optimisation in a Heaving-Point Absorber Wave Energy Converter', pre: '', post: ', Banavar RN, Maithripala DH.', venue: '29th Mediterranean Conference on Control and Automation (MED), pp. 967–972, IEEE', link: 'https://doi.org/10.1109/MED51440.2021.9480198' }
+    ].map((p) => ({ ...p, hasLink: !!p.link, linkLabel: p.link.indexOf('arxiv.org') >= 0 ? 'arXiv' : 'DOI' }));
+    const talks = [
+      { when: '2025', title: 'Paper Reviewer', where: 'AAAI 2026 · IEEE Control Systems Letters (L-CSS)' },
+      { when: '2025', title: 'Best Presenter Award', where: 'CSL Student Conference, UIUC · MDPs, RL and Optimization session' },
+      { when: '2025', title: 'Volunteer High-School Research Mentor', where: 'UIUC, Champaign, IL' },
+      { when: 'Jan 2025', title: 'Invited Speaker: Routing and Scheduling', where: 'Tata Consultancy Services Research, Mumbai' },
+      { when: 'Aug 2021', title: 'Speaker: Lectures in Differential Geometry', where: 'Systems & Control Engineering, IIT Bombay' },
+      { when: 'Jun 2021', title: 'Invited Speaker: The Intermediate Axis Theorem', where: 'Maths & Physics Club, IIT Bombay' },
+      { when: 'Aug 2019', title: 'Geometric Mechanics Workshop', where: 'Systems & Control Engineering, IIT Bombay' },
+      { when: 'May 2019', title: 'Helicopters Lab Visit', where: 'Aerospace Engineering, IIT Kanpur' },
+      { when: 'Mar 2019', title: 'Nonlinear Control & Robotics Workshop', where: 'University of Peradeniya, Sri Lanka' }
+    ];
+    return {
+      nav, pubs, talks,
+      goHome: () => this.go('about'),
+      isAbout: tab === 'about',
+      isResearch: tab === 'research',
+      isPublications: tab === 'publications',
+      isTeaching: tab === 'teaching',
+      isTalks: tab === 'talks',
+      isCv: tab === 'cv'
+    };
+  }
+}
+</script>
+</body>
+</html>
